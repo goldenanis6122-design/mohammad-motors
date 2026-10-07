@@ -3,16 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>মোহাম্মদ মোটরস | Used Motorcycle</title>
 
 <style>
-*{box-sizing:border-box}
+*{
+  box-sizing:border-box;
+}
+
 body{
   margin:0;
   font-family:Arial,"Noto Sans Bengali",sans-serif;
   background:#f5f6f8;
   color:#17202a;
 }
+
 header{
   background:#111827;
   color:white;
@@ -23,68 +28,30 @@ header{
   gap:15px;
   flex-wrap:wrap;
 }
+
 .logo{
   font-size:24px;
   font-weight:bold;
 }
-.logo span{color:#f5b400}
+
+.logo span{
+  color:#f5b400;
+}
+
 .logo small{
   display:block;
   font-size:12px;
   color:#cbd5e1;
   margin-top:4px;
 }
+
 nav a{
   color:white;
   text-decoration:none;
   margin:0 8px;
   font-size:14px;
 }
-.hero{
-  background:linear-gradient(135deg,#111827,#263449);
-  color:white;
-  padding:65px 6%;
-}
-.hero h1{
-  font-size:42px;
-  margin:0 0 12px;
-}
-.hero h1 span{color:#f5b400}
-.hero p{
-  font-size:17px;
-  line-height:1.7;
-  max-width:750px;
-}
-.container{
-  width:90%;
-  max-width:1200px;
-  margin:35px auto;
-}
-.searchbox{
-  background:white;
-  padding:18px;
-  border-radius:14px;
-  box-shadow:0 3px 15px #00000012;
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-}
-.searchbox input,
-.searchbox select{
-  padding:13px;
-  border:1px solid #ddd;
-  border-radius:9px;
-  font-size:15px;
-  flex:1;
-  min-width:180px;
-}
-.section-title{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin:30px 0 18px;
-}
-.section-title h2{margin:0}
+
 button{
   border:0;
   background:#f5b400;
@@ -94,28 +61,94 @@ button{
   font-weight:bold;
   cursor:pointer;
 }
+
+.hero{
+  background:linear-gradient(135deg,#111827,#263449);
+  color:white;
+  padding:65px 6%;
+}
+
+.hero h1{
+  font-size:42px;
+  margin:0 0 12px;
+}
+
+.hero h1 span{
+  color:#f5b400;
+}
+
+.hero p{
+  font-size:17px;
+  line-height:1.7;
+  max-width:750px;
+}
+
+.container{
+  width:90%;
+  max-width:1200px;
+  margin:35px auto;
+}
+
+.searchbox{
+  background:white;
+  padding:18px;
+  border-radius:14px;
+  box-shadow:0 3px 15px #00000012;
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.searchbox input,
+.searchbox select{
+  padding:13px;
+  border:1px solid #ddd;
+  border-radius:9px;
+  font-size:15px;
+  flex:1;
+  min-width:180px;
+}
+
+.section-title{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin:30px 0 18px;
+}
+
+.section-title h2{
+  margin:0;
+}
+
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:20px;
 }
+
 .card{
   background:white;
   border-radius:15px;
   overflow:hidden;
   box-shadow:0 3px 15px #00000012;
 }
+
 .card img{
   width:100%;
   height:210px;
   object-fit:cover;
   background:#ddd;
 }
-.card-body{padding:17px}
+
+.card-body{
+  padding:17px;
+}
+
 .card h3{
   margin:0 0 10px;
   font-size:21px;
 }
+
 .details{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -123,12 +156,14 @@ button{
   font-size:14px;
   color:#555;
 }
+
 .price{
   color:#111827;
   font-size:21px;
   font-weight:bold;
   margin:15px 0;
 }
+
 .contact{
   display:block;
   text-align:center;
@@ -138,6 +173,7 @@ button{
   padding:12px;
   border-radius:8px;
 }
+
 .about{
   background:white;
   padding:30px;
@@ -145,6 +181,7 @@ button{
   margin-top:40px;
   line-height:1.8;
 }
+
 footer{
   margin-top:50px;
   background:#111827;
@@ -153,6 +190,7 @@ footer{
   text-align:center;
   line-height:1.8;
 }
+
 .modal{
   display:none;
   position:fixed;
@@ -162,6 +200,7 @@ footer{
   padding:20px;
   overflow:auto;
 }
+
 .modal-box{
   background:white;
   max-width:600px;
@@ -169,18 +208,25 @@ footer{
   padding:25px;
   border-radius:15px;
 }
-.modal-box h2{margin-top:0}
+
+.modal-box h2{
+  margin-top:0;
+}
+
 .close{
   float:right;
   font-size:25px;
   cursor:pointer;
 }
+
 form label{
   display:block;
   margin:12px 0;
   font-weight:bold;
 }
-form input,form select{
+
+form input,
+form select{
   display:block;
   width:100%;
   padding:12px;
@@ -188,12 +234,27 @@ form input,form select{
   border:1px solid #ddd;
   border-radius:8px;
 }
-form button{width:100%;margin-top:12px}
+
+form button{
+  width:100%;
+  margin-top:12px;
+}
 
 @media(max-width:700px){
-  nav{display:none}
-  .hero h1{font-size:32px}
-  .section-title{align-items:flex-start;gap:10px;flex-direction:column}
+
+  nav{
+    display:none;
+  }
+
+  .hero h1{
+    font-size:32px;
+  }
+
+  .section-title{
+    align-items:flex-start;
+    gap:10px;
+    flex-direction:column;
+  }
 }
 </style>
 </head>
@@ -201,6 +262,7 @@ form button{width:100%;margin-top:12px}
 <body>
 
 <header>
+
   <div class="logo">
     🏍️ MOHAMMAD <span>MOTORS</span>
     <small>Used Bike Buy • Sell • Exchange</small>
@@ -213,22 +275,35 @@ form button{width:100%;margin-top:12px}
     <a href="#contact">যোগাযোগ</a>
   </nav>
 
-  <button onclick="openModal()">＋ বাইক যোগ করুন</button>
+  <button type="button" onclick="openModal()">
+    ＋ বাইক যোগ করুন
+  </button>
+
 </header>
 
+
 <section class="hero" id="home">
-  <h1>মোহাম্মদ <span>মোটরস</span></h1>
+
+  <h1>
+    মোহাম্মদ <span>মোটরস</span>
+  </h1>
+
   <p>
     পুরাতন মোটরসাইকেল ক্রয়, বিক্রয় ও এক্সচেঞ্জের বিশ্বস্ত ঠিকানা।
   </p>
+
   <p>
-    📍 142/K/1, বংশাল রোড, মুকিমবাজার, পাকিস্তান মাঠ, ঢাকা-1100
+    📍 142/K/1, বংশাল রোড, মুকিমবাজার,
+    পাকিস্তান মাঠ, ঢাকা-1100
   </p>
+
 </section>
+
 
 <div class="container">
 
   <div class="searchbox">
+
     <input
       id="search"
       type="text"
@@ -249,123 +324,218 @@ form button{width:100%;margin-top:12px}
       <option value="২য় মালিক">২য় মালিক</option>
       <option value="৩য় মালিক">৩য় মালিক</option>
     </select>
+
   </div>
 
+
   <div class="section-title" id="bikes">
+
     <h2>🏍️ আমাদের বাইকসমূহ</h2>
-    <button onclick="openModal()">＋ নতুন বাইক যোগ করুন</button>
+
+    <button type="button" onclick="openModal()">
+      ＋ নতুন বাইক যোগ করুন
+    </button>
+
   </div>
+
 
   <div class="grid" id="bikeGrid"></div>
 
+
   <section class="about" id="about">
+
     <h2>মোহাম্মদ মোটরস সম্পর্কে</h2>
+
     <p>
-      মোহাম্মদ মোটরস পুরাতন মোটরসাইকেল ক্রয়, বিক্রয় ও এক্সচেঞ্জ করে থাকে।
-      প্রতিটি বাইকের মডেল, কালার, মালিক সংখ্যা, চলার দূরত্ব এবং ইঞ্জিনের
-      অবস্থা পরিষ্কারভাবে জানানো হবে।
+      মোহাম্মদ মোটরস পুরাতন মোটরসাইকেল ক্রয়,
+      বিক্রয় ও এক্সচেঞ্জ করে থাকে।
+      প্রতিটি বাইকের মডেল, কালার, মালিক সংখ্যা,
+      চলার দূরত্ব এবং ইঞ্জিনের অবস্থা পরিষ্কারভাবে
+      জানানো হবে।
     </p>
+
   </section>
 
 </div>
 
+
 <footer id="contact">
+
   <h2>🏍️ MOHAMMAD MOTORS</h2>
-  <p>📍 142/K/1, বংশাল রোড, মুকিমবাজার, পাকিস্তান মাঠ, ঢাকা-1100</p>
-  <p>📞 যোগাযোগ: আপনার ফোন নম্বর এখানে দিন</p>
-  <p>© 2026 Mohammad Motors. All Rights Reserved.</p>
+
+  <p>
+    📍 142/K/1, বংশাল রোড, মুকিমবাজার,
+    পাকিস্তান মাঠ, ঢাকা-1100
+  </p>
+
+  <p>
+    📞 যোগাযোগ: ফোন নম্বর শীঘ্রই যুক্ত করা হবে
+  </p>
+
+  <p>
+    © 2026 Mohammad Motors. All Rights Reserved.
+  </p>
+
 </footer>
 
+
 <div class="modal" id="modal">
+
   <div class="modal-box">
+
     <span class="close" onclick="closeModal()">✕</span>
+
     <h2>নতুন বাইক যোগ করুন</h2>
 
     <form onsubmit="addBike(event)">
 
       <label>
         বাইকের ছবি
-        <input id="photo" type="file" accept="image/*" required>
+        <input
+          id="photo"
+          type="file"
+          accept="image/*"
+          required
+        >
       </label>
 
       <label>
         মডেল
-        <input id="model" placeholder="যেমন: Yamaha FZS V3" required>
+        <input
+          id="model"
+          placeholder="যেমন: Yamaha FZS V3"
+          required
+        >
       </label>
 
       <label>
         মডেল বছর
-        <input id="year" placeholder="2021">
+        <input
+          id="year"
+          placeholder="2021"
+        >
       </label>
 
       <label>
         কালার
-        <input id="color" placeholder="কালো" required>
+        <input
+          id="color"
+          placeholder="কালো"
+          required
+        >
       </label>
 
       <label>
         মালিক
+
         <select id="ownerInput">
+
           <option>১ম মালিক</option>
           <option>২য় মালিক</option>
           <option>৩য় মালিক</option>
+
         </select>
+
       </label>
 
       <label>
         চলেছে কত কিলোমিটার
-        <input id="km" placeholder="18500" required>
+
+        <input
+          id="km"
+          placeholder="18500"
+          required
+        >
+
       </label>
 
       <label>
         ইঞ্জিনের অবস্থা
+
         <select id="engineInput">
+
           <option>Untouched</option>
           <option>Fresh</option>
           <option>Serviced</option>
+
         </select>
+
       </label>
 
       <label>
         দাম
-        <input id="price" placeholder="265000" required>
+
+        <input
+          id="price"
+          placeholder="265000"
+          required
+        >
+
       </label>
 
-      <button type="submit">বাইকটি যোগ করুন</button>
+      <button type="submit">
+        বাইকটি যোগ করুন
+      </button>
 
     </form>
+
   </div>
+
 </div>
+
 
 <script>
 
-let bikes = [
-  {
-    model:"Yamaha FZS V3",
-    year:"2021",
-    color:"কালো",
-    owner:"১ম মালিক",
-    km:"18,500",
-    engine:"Untouched",
-    price:"৳ 2,65,000",
-    image:"https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=900&q=80"
-  },
-  {
-    model:"Honda CB Hornet",
-    year:"2020",
-    color:"লাল",
-    owner:"২য় মালিক",
-    km:"22,000",
-    engine:"Fresh",
-    price:"৳ 2,35,000",
-    image:"https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=900&q=80"
-  }
-];
+let savedBikes =
+  localStorage.getItem("mohammadMotorsBikes");
+
+let bikes = savedBikes
+  ? JSON.parse(savedBikes)
+  : [
+
+      {
+        model:"Yamaha FZS V3",
+        year:"2021",
+        color:"কালো",
+        owner:"১ম মালিক",
+        km:"18,500",
+        engine:"Untouched",
+        price:"৳ 2,65,000",
+        image:
+        "https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=900&q=80"
+      },
+
+      {
+        model:"Honda CB Hornet",
+        year:"2020",
+        color:"লাল",
+        owner:"২য় মালিক",
+        km:"22,000",
+        engine:"Fresh",
+        price:"৳ 2,35,000",
+        image:
+        "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=900&q=80"
+      }
+
+    ];
+
+
+function saveBikes(){
+
+  localStorage.setItem(
+    "mohammadMotorsBikes",
+    JSON.stringify(bikes)
+  );
+
+}
+
 
 function showBikes(){
 
   let search =
-    document.getElementById("search").value.toLowerCase();
+    document.getElementById("search")
+    .value
+    .toLowerCase();
 
   let engine =
     document.getElementById("engine").value;
@@ -373,108 +543,182 @@ function showBikes(){
   let owner =
     document.getElementById("owner").value;
 
+
   let filtered = bikes.filter(b => {
 
     let text =
-      (b.model + " " + b.color + " " + b.year).toLowerCase();
+      (
+        b.model +
+        " " +
+        b.color +
+        " " +
+        b.year
+      ).toLowerCase();
 
     return text.includes(search)
-      && (!engine || b.engine === engine)
-      && (!owner || b.owner === owner);
+      &&
+      (!engine || b.engine === engine)
+      &&
+      (!owner || b.owner === owner);
 
   });
 
-  let grid = document.getElementById("bikeGrid");
+
+  let grid =
+    document.getElementById("bikeGrid");
 
   grid.innerHTML = "";
 
+
   if(filtered.length === 0){
+
     grid.innerHTML =
       "<p>এই মুহূর্তে কোনো বাইক পাওয়া যায়নি।</p>";
+
     return;
+
   }
+
 
   filtered.forEach(b => {
 
     grid.innerHTML += `
+
       <div class="card">
 
-        <img src="${b.image}" alt="${b.model}">
+        <img
+          src="${b.image}"
+          alt="${b.model}"
+        >
 
         <div class="card-body">
 
           <h3>${b.model}</h3>
 
           <div class="details">
+
             <div>📅 বছর: ${b.year}</div>
+
             <div>🎨 কালার: ${b.color}</div>
+
             <div>👤 মালিক: ${b.owner}</div>
+
             <div>🛣️ চলেছে: ${b.km} KM</div>
+
             <div>⚙️ ইঞ্জিন: ${b.engine}</div>
+
           </div>
 
-          <div class="price">${b.price}</div>
+          <div class="price">
+            ${b.price}
+          </div>
 
-          <a class="contact"
-             href="#contact">
-             📞 যোগাযোগ করুন
+          <a
+            class="contact"
+            href="#contact"
+          >
+            📞 যোগাযোগ করুন
           </a>
 
         </div>
+
       </div>
+
     `;
+
   });
+
 }
+
 
 function openModal(){
-  document.getElementById("modal").style.display="block";
+
+  document.getElementById("modal")
+    .style.display = "block";
+
 }
 
+
 function closeModal(){
-  document.getElementById("modal").style.display="none";
+
+  document.getElementById("modal")
+    .style.display = "none";
+
 }
+
 
 function addBike(e){
 
   e.preventDefault();
 
-  let file =
-    document.getElementById("photo").files[0];
 
-  let reader = new FileReader();
+  let file =
+    document.getElementById("photo")
+    .files[0];
+
+
+  if(!file){
+
+    alert("দয়া করে বাইকের ছবি নির্বাচন করুন।");
+
+    return;
+
+  }
+
+
+  let reader =
+    new FileReader();
+
 
   reader.onload = function(){
 
     bikes.unshift({
 
-      model:document.getElementById("model").value,
+      model:
+        document.getElementById("model").value,
 
-      year:document.getElementById("year").value,
+      year:
+        document.getElementById("year").value,
 
-      color:document.getElementById("color").value,
+      color:
+        document.getElementById("color").value,
 
-      owner:document.getElementById("ownerInput").value,
+      owner:
+        document.getElementById("ownerInput").value,
 
-      km:document.getElementById("km").value,
+      km:
+        document.getElementById("km").value,
 
-      engine:document.getElementById("engineInput").value,
+      engine:
+        document.getElementById("engineInput").value,
 
-      price:"৳ " + document.getElementById("price").value,
+      price:
+        "৳ " +
+        document.getElementById("price").value,
 
-      image:reader.result
+      image:
+        reader.result
 
     });
 
+
+    saveBikes();
+
     showBikes();
 
-    document.querySelector("form").reset();
+    document
+      .querySelector("form")
+      .reset();
 
     closeModal();
 
   };
 
+
   reader.readAsDataURL(file);
+
 }
+
 
 showBikes();
 
