@@ -47,7 +47,19 @@ a{text-decoration:none;color:inherit}
 .topbar .container{
   display:flex;
   justify-content:space-between;
+  align-items:center;
   gap:15px;
+  flex-wrap:wrap;
+}
+
+.hotline-badge{
+  background:var(--red);
+  color:#fff;
+  padding:2px 8px;
+  border-radius:4px;
+  font-weight:700;
+  font-size:12px;
+  margin-right:5px;
 }
 
 header{
@@ -74,14 +86,12 @@ header{
   gap:12px;
 }
 
-.logo-icon{
+.logo-img{
   width:48px;
   height:48px;
   border-radius:50%;
-  display:grid;
-  place-items:center;
-  background:var(--red);
-  font-size:24px;
+  object-fit:cover;
+  border:2px solid var(--red);
 }
 
 .logo strong{
@@ -189,12 +199,16 @@ nav a:hover{color:#fff}
   border-radius:22px;
   padding:30px;
   box-shadow:0 20px 50px rgba(0,0,0,.2);
+  text-align:center;
 }
 
-.hero-bike{
-  font-size:80px;
-  text-align:center;
-  margin-bottom:10px;
+.hero-logo-img{
+  width:90px;
+  height:90px;
+  border-radius:50%;
+  object-fit:cover;
+  border:3px solid var(--red);
+  margin-bottom:15px;
 }
 
 .hero-card h3{
@@ -318,24 +332,11 @@ section{
 
 .bike-image{
   height:190px;
-  background:
-    linear-gradient(135deg,#272d35,#101318);
+  background:linear-gradient(135deg,#272d35,#101318);
   display:grid;
   place-items:center;
   font-size:82px;
   position:relative;
-}
-
-.owner-tag{
-  position:absolute;
-  left:15px;
-  top:15px;
-  background:var(--red);
-  color:#fff;
-  padding:6px 10px;
-  border-radius:50px;
-  font-size:11px;
-  font-weight:700;
 }
 
 .bike-content{
@@ -406,10 +407,16 @@ section{
   color:#fff;
   border-radius:22px;
   padding:35px;
+  text-align:center;
 }
 
-.about-box .big{
-  font-size:70px;
+.about-logo-img{
+  width:90px;
+  height:90px;
+  border-radius:50%;
+  object-fit:cover;
+  border:3px solid var(--red);
+  margin-bottom:15px;
 }
 
 .about h2{
@@ -492,6 +499,11 @@ section{
   display:block;
   color:#929aa6;
   margin-bottom:3px;
+}
+
+.contact-item a{
+  color:#ff6970;
+  font-weight:bold;
 }
 
 footer{
@@ -645,7 +657,7 @@ footer{
 <div class="topbar">
   <div class="container">
     <span>🏍️ পুরাতন বাইক • ক্রয় • বিক্রয় • এক্সচেঞ্জ</span>
-    <span>ঢাকা-1100</span>
+    <span><span class="hotline-badge">হটলাইন</span>📞 <a href="tel:01798838883"><strong>01798838883</strong></a> | ঢাকা-1100</span>
   </div>
 </div>
 
@@ -653,7 +665,7 @@ footer{
   <div class="container nav">
 
     <a class="logo" href="#">
-      <div class="logo-icon">🏍️</div>
+      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAP//////////////////////////////////////////////////////////////////////////////////////wgALCAAsACwBAREA/8QAFBABAAAAAAAAAAAAAAAAAAAAAP/aAAgBAQABPxA=" alt="Mohammad Motors Logo" class="logo-img" id="logoImage">
       <div>
         <strong>MOHAMMAD MOTORS</strong>
         <small>USED BIKE • BUY • SELL • EXCHANGE</small>
@@ -698,7 +710,7 @@ footer{
     </div>
 
     <div class="hero-card">
-      <div class="hero-bike">🏍️</div>
+      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAP//////////////////////////////////////////////////////////////////////////////////////wgALCAAsACwBAREA/8QAFBABAAAAAAAAAAAAAAAAAAAAAP/aAAgBAQABPxA=" alt="Mohammad Motors Logo" class="hero-logo-img">
       <h3>Trusted Used Bike</h3>
       <p>আপনার প্রয়োজনের বাইক, আপনার বাজেটের মধ্যে।</p>
 
@@ -759,13 +771,6 @@ footer{
         <option value="160">160cc</option>
         <option value="125">125cc</option>
       </select>
-
-      <select class="select" id="ownerFilter" onchange="renderBikes()">
-        <option value="">সব মালিকানা</option>
-        <option value="১ম মালিক">১ম মালিক</option>
-        <option value="২য় মালিক">২য় মালিক</option>
-        <option value="৩য় মালিক">৩য় মালিক</option>
-      </select>
     </div>
 
     <div class="bikes-grid" id="bikesGrid"></div>
@@ -800,7 +805,7 @@ footer{
     </div>
 
     <div class="about-box">
-      <div class="big">🏍️</div>
+      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAP//////////////////////////////////////////////////////////////////////////////////////wgALCAAsACwBAREA/8QAFBABAAAAAAAAAAAAAAAAAAAAAP/aAAgBAQABPxA=" alt="Mohammad Motors Logo" class="about-logo-img">
       <h3>Buy • Sell • Exchange</h3>
       <p>
         পুরাতন বাইক কিনতে চান, আপনার বাইক বিক্রি করতে চান অথবা
@@ -884,8 +889,8 @@ footer{
       </div>
 
       <div class="contact-item">
-        <small>📞 ফোন</small>
-        <strong>ফোন নম্বর শীঘ্রই যোগ করা হবে</strong>
+        <small>📞 হটলাইন ফোন</small>
+        <strong><a href="tel:01798838883">01798838883</a></strong>
       </div>
 
     </div>
@@ -897,7 +902,7 @@ footer{
 <footer>
   <div class="container footer-inner">
     <div>© 2026 Mohammad Motors. All Rights Reserved.</div>
-    <div>Dhaka-1100 • Buy • Sell • Exchange</div>
+    <div>Dhaka-1100 • হটলাইন: 01798838883</div>
   </div>
 </footer>
 
@@ -927,15 +932,6 @@ footer{
         <div class="form-group">
           <label>রং</label>
           <input id="bikeColor" required placeholder="কালো">
-        </div>
-
-        <div class="form-group">
-          <label>মালিকানা</label>
-          <select id="bikeOwner">
-            <option>১ম মালিক</option>
-            <option>২য় মালিক</option>
-            <option>৩য় মালিক</option>
-          </select>
         </div>
 
         <div class="form-group">
@@ -972,12 +968,20 @@ footer{
 
 <script>
 
+const customLogoUrl = ""; 
+
+if(customLogoUrl){
+  document.getElementById("logoImage").src = customLogoUrl;
+  document.querySelectorAll(".hero-logo-img, .about-logo-img").forEach(img => {
+    img.src = customLogoUrl;
+  });
+}
+
 const defaultBikes = [
   {
     name:"Yamaha FZS V3",
     year:"2021",
     color:"কালো",
-    owner:"১ম মালিক",
     km:"18,500 KM",
     engine:"150cc",
     condition:"Untouched",
@@ -987,7 +991,6 @@ const defaultBikes = [
     name:"Honda CB Hornet",
     year:"2020",
     color:"লাল",
-    owner:"২য় মালিক",
     km:"22,000 KM",
     engine:"160cc",
     condition:"Fresh",
@@ -1022,9 +1025,6 @@ function renderBikes(){
   const engine =
     document.getElementById("engineFilter").value;
 
-  const owner =
-    document.getElementById("ownerFilter").value;
-
   const filtered = bikes.filter(bike => {
 
     const matchesSearch =
@@ -1036,13 +1036,7 @@ function renderBikes(){
       !engine ||
       bike.engine.includes(engine);
 
-    const matchesOwner =
-      !owner ||
-      bike.owner === owner;
-
-    return matchesSearch &&
-           matchesEngine &&
-           matchesOwner;
+    return matchesSearch && matchesEngine;
   });
 
   grid.innerHTML = "";
@@ -1054,14 +1048,13 @@ function renderBikes(){
 
   empty.style.display = "none";
 
-  filtered.forEach((bike,index) => {
+  filtered.forEach((bike) => {
 
     const card = document.createElement("article");
     card.className = "bike-card";
 
     card.innerHTML = `
       <div class="bike-image">
-        <span class="owner-tag">${bike.owner}</span>
         🏍️
       </div>
 
@@ -1091,8 +1084,8 @@ function renderBikes(){
           </div>
 
           <div class="detail">
-            <small>মালিকানা</small>
-            <strong>${bike.owner}</strong>
+            <small>যোগাযোগ</small>
+            <strong><a href="tel:01798838883" style="color:var(--red);">01798838883</a></strong>
           </div>
 
         </div>
@@ -1102,12 +1095,12 @@ function renderBikes(){
             ${formatPrice(bike.price)}
           </div>
 
-          <button
+          <a
             class="btn btn-red"
-            onclick="contactBike('${bike.name.replace(/'/g,"\\'")}')"
+            href="tel:01798838883"
           >
-            যোগাযোগ
-          </button>
+            কল করুন
+          </a>
         </div>
 
       </div>
@@ -1115,20 +1108,6 @@ function renderBikes(){
 
     grid.appendChild(card);
   });
-}
-
-function contactBike(name){
-
-  alert(
-    "আপনি " +
-    name +
-    " বাইকটির বিষয়ে যোগাযোগ করতে চাচ্ছেন।\n\n" +
-    "ঠিকানা: 142/K/1, বংশাল রোড, মুকিমবাজার, পাকিস্তান মাঠ, ঢাকা-1100"
-  );
-
-  document
-    .getElementById("contact")
-    .scrollIntoView({behavior:"smooth"});
 }
 
 function openModal(){
@@ -1161,7 +1140,6 @@ document
       name:document.getElementById("bikeName").value,
       year:document.getElementById("bikeYear").value,
       color:document.getElementById("bikeColor").value,
-      owner:document.getElementById("bikeOwner").value,
       km:document.getElementById("bikeKm").value + " KM",
       engine:document.getElementById("bikeEngine").value,
       condition:document.getElementById("bikeCondition").value,
